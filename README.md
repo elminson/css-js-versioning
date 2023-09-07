@@ -1,5 +1,9 @@
 # css-version
 
+# Installation
+
+`composer require elminson/css-version`
+
 # After install execute
 
 `composer run post-install-cmd`
