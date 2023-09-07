@@ -1,4 +1,5 @@
 # css-version
+This package performs versioning of the css files.
 
 # Installation
 
@@ -26,3 +27,10 @@ $cssVersion = file_get_contents("css_version");
 ```
 
 <img src="tests/css_version_test.png">
+
+# running local test
+```bash
+$ php -S localhost:8000 -t tests/
+```
+
+<img src="tests/local_test.png">
