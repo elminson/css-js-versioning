@@ -24,3 +24,5 @@ $cssVersion = file_get_contents("css_version");
 <link href="<?=base_url();?>css/morestyles.css?v=<?=$cssVersion?>" rel="stylesheet">
 ...
 ```
+
+<img src="tests/css_version_test.png">
