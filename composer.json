@@ -1,0 +1,20 @@
+{
+    "name": "elminson/css-version",
+    "description": "This package generate a css versioning based on the commit hash",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elminson De Oleo Baez",
+            "email": "edeoleo@gmail.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "post-install-cmd": [
+            "cp -r 'hooks/' '.git/hooks/'",
+            "php -r \"copy('hooks/pre-commit', '.git/hooks/pre-commit');\"",
+            "php -r \"chmod('.git/hooks/pre-commit', 0777);\""
+        ]
+    }
+}
