@@ -14,6 +14,7 @@ modified_files=$(git diff --name-only --cached)
 
 # Initialize a variable to check if any CSS file is found
 css_found=0
+js_found=0
 
 # Loop through the modified files and check for 'css' extension
 for file in $modified_files; do
@@ -47,4 +48,38 @@ if [[ $css_found -eq 1 ]]; then
     fi
 else
     echo "No CSS files found."
+fi
+
+# Loop through the modified files and check for 'js' extension
+for file in $modified_files; do
+    if [[ $file == *.js ]]; then
+        js_found=1
+        break
+    fi
+done
+
+# If any file has the 'css' extension, execute the specified commands
+if [[ $js_found -eq 1 ]]; then
+    current_hash=$(git log --pretty="%h" -n1 HEAD)
+
+    # Check if js_version file exists and read its content
+    if [[ -f js_version ]]; then
+        stored_hash=$(cat js_version)
+    else
+        stored_hash=""
+    fi
+
+    # Only commit if the current hash and stored hash are different
+    if [[ $current_hash != $stored_hash ]]; then
+
+        echo $current_hash > js_version
+        git update-index --add js_version
+        git checkout --theirs js_version
+        git add js_version
+        echo "JS version updated to $current_hash."
+    else
+        echo "JS version is already up-to-date."
+    fi
+else
+    echo "No JS files found."
 fi

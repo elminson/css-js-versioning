@@ -17,12 +17,17 @@ This command will install the pre-commit file on .git folder
 ```php
 <?php
 $cssVersion = file_get_contents("css_version");
+$jsVersion = file_get_contents("js_version");
 ?>
 
 
 #implementation in all your css link href
 <link href="<?=base_url();?>css/app.css?v=<?=$cssVersion?>" rel="stylesheet">
 <link href="<?=base_url();?>css/morestyles.css?v=<?=$cssVersion?>" rel="stylesheet">
+
+#implementation in all your js file
+<script src="js/index.js?v=<?=$jsVersion?>"></script>
+
 ...
 ```
 
