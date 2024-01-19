@@ -32,6 +32,7 @@ $jsVersion = file_get_contents("js_version");
 ```
 
 <img src="tests/css_version_test.png">
+<img src="tests/js_version_test.png">
 
 # running local test
 ```bash
