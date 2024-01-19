@@ -33,6 +33,8 @@ $jsVersion = file_get_contents("js_version");
 
 <img src="tests/css_version_test.png">
 <img src="tests/js_version_test.png">
+### No css or js changes
+<img src="tests/no_changes.png">
 
 # running local test
 ```bash
