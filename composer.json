@@ -1,6 +1,6 @@
 {
-    "name": "elminson/css-version",
-    "description": "This package generate a css versioning based on the commit hash",
+    "name": "elminson/css-js-versioning",
+    "description": "This package generate a css and js versioning based on the commit hash",
     "type": "library",
     "license": "MIT",
     "authors": [
