@@ -3,7 +3,7 @@ This package performs versioning of the css files.
 
 # Installation
 
-`composer require elminson/css-version`
+`composer require elminson/css-js-versioning`
 
 # After install execute
 
